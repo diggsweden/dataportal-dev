@@ -1,0 +1,165 @@
+@import '~@digg/design-system/lib/sass/variables';
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  &:focus {
+    outline: none;
+  }
+}
+
+//Background-color for root
+//Max-width for content
+#__next {
+  background-color: $clr-gray200;
+
+  #top {
+    max-width: 80rem;
+    margin: auto;
+  }
+}
+
+//Main wrapping container
+.main-container {
+  width: calc(100% - 2rem) !important;
+  max-width: $page-width;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  // margin-bottom: $space-16;
+  @media screen and (min-width: $media-2xl) {
+  }
+}
+
+//Focus for most elements
+html a:focus-visible,
+html button:focus-visible,
+html input:focus-visible,
+html input[type='radio']:focus-visible,
+html textarea:focus-visible,
+html select:focus-visible {
+  @include focusStyle;
+}
+
+//Remove focus before tabbing..
+.no-focus-outline a:focus,
+.no-focus-outline button:focus,
+.no-focus-outline input:focus,
+.no-focus-outline input[type='radio']:focus,
+.no-focus-outline textarea:focus,
+.no-focus-outline select:focus {
+  outline: none !important;
+}
+
+span.editor-format-gray {
+  background-color: #e0e1e6;
+}
+
+span.editor-format-purple {
+  background-color: #eae6ff;
+}
+
+span.editor-format-blue {
+  background-color: #deebfe;
+}
+
+span.editor-format-red {
+  background-color: #feebe7;
+}
+
+span.editor-format-yellow {
+  background-color: #fff1b4;
+}
+
+span.editor-format-green {
+  background-color: #e5fef2;
+}
+
+.main-container--contentwrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  @media screen and (min-width: $media-md) {
+    flex-direction: row-reverse;
+  }
+}
+
+.anchorlink_wrapper {
+  width: auto;
+  padding-left: 0rem;
+
+  @media screen and (min-width: $media-md) {
+    padding-left: $space-16;
+  }
+}
+
+//General style för all tables
+figure.table {
+  margin: 0;
+  margin-bottom: 2rem;
+
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  border-right: 1px solid #d9d9d9;
+  @media screen and (min-width: $media-sm) {
+    border-right: none;
+  }
+  table {
+    width: 100%;
+    border: none;
+    white-space: normal;
+    margin: 0;
+    @media screen and (max-width: 24rem) {
+      min-width: 24rem;
+    }
+    border-collapse: collapse;
+  }
+
+  th {
+    background: #f4f5f7;
+    font-weight: bold;
+    border: 1px solid #d9d9d9;
+    text-align: start;
+  }
+  td,
+  th {
+    min-width: 4rem;
+    font-size: 0.925rem;
+    line-height: 1.6875rem;
+    padding: 2rem 0.5rem;
+    border: 1px solid #d9d9d9;
+    white-space: normal;
+
+    & > p,
+    span,
+    a,
+    li {
+      word-break: break-word;
+      font-size: 0.925rem;
+    }
+  }
+}
+
+body {
+  margin: 0;
+}
+
+mark {
+  background-color: #e0e1e6;
+  padding: 0 0.2em;
+}
+
+.link-btn {
+  border: none;
+  background-color: white;
+  color: $clr-gray900;
+  @include Underline;
+  &:hover {
+    color: $clr-gray600;
+  }
+}

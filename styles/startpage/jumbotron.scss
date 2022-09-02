@@ -1,0 +1,73 @@
+@import '~@digg/design-system/lib/sass/variables';
+
+.jumbotron-wrapper {
+  margin-bottom: $space-4;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $space-16;
+  max-width: $page-width;
+  margin: auto;
+  padding-top: $space-16;
+  padding-bottom: $space-16;
+
+  @media screen and (min-width: $media-md) {
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: $space-24;
+    padding-bottom: $space-24;
+    .jumbotron_img {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .jumbotron_heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: $space-6;
+
+    h1 {
+      @include wordBreak;
+      margin-top: 0rem;
+      margin-bottom: 0.5rem;
+    }
+
+    span {
+      text-align: left;
+    }
+
+    @media screen and (min-width: $media-md) {
+      width: 50%;
+      h1 {
+        text-align: end;
+      }
+
+      span {
+        text-align: end;
+      }
+    }
+  }
+
+  .jumbotron_img {
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 70%;
+    }
+    @media screen and (min-width: $media-md) {
+      display: unset;
+      width: 50%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

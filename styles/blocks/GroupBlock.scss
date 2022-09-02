@@ -1,0 +1,12 @@
+.groupBlock {
+  .groupBlock--texts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .groupBlock--texts-item {
+      width: 300px;
+      padding: 0;
+    }
+  }
+}

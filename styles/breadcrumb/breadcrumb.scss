@@ -1,0 +1,32 @@
+@import '~@digg/design-system/lib/sass/variables';
+
+.breadcrumb {
+  // border-bottom: 1px solid $clr-gray200;
+  max-width: 72rem;
+  margin: auto;
+  width: calc(100% - $space-8) !important;
+  padding-bottom: 32px;
+
+  ol > li > span > span {
+    font-size: 0.875rem !important;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $clr-gray900;
+
+    span {
+      border: none;
+    }
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &:active,
+    &:visited {
+      color: $clr-gray900;
+    }
+  }
+}

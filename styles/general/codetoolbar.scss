@@ -1,0 +1,46 @@
+@import '~@digg/design-system/lib/sass/variables';
+
+.code-toolbar {
+  overflow-x: auto;
+
+  pre:focus-visible {
+    @include focusStyle;
+  }
+
+  .toolbar {
+    opacity: 1;
+
+    .toolbar-item {
+      button {
+        &.copy-to-clipboard-button {
+          box-shadow: none;
+          border: 2px solid $clr-gray500;
+          color: $clr-gray900;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 2.75rem;
+          min-width: 2.75rem;
+
+          span {
+            box-shadow: none;
+            font-size: 0.7rem;
+            color: $clr-gray900;
+          }
+
+          &:hover {
+            border-color: $clr-gray900;
+          }
+        }
+      }
+    }
+  }
+
+  pre {
+    background-color: #f5f2f0;
+  }
+  //Hinders long strings to be hidden behind copy-button
+  pre[class*='language-'] {
+    padding-top: 3.25em;
+  }
+}

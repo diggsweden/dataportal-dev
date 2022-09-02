@@ -1,0 +1,21 @@
+@import '~@digg/design-system/lib/sass/variables';
+
+.pagenavigation {
+  width: 100%;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 48px;
+
+  @media screen and (min-width: $media-md) {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    float: right;
+    top: 32px;
+    padding: 0 16px 16px 16px;
+    right: 0px;
+    margin-bottom: 0;
+  }
+}

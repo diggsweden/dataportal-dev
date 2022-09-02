@@ -1,0 +1,129 @@
+@import '~@digg/design-system/lib/sass/variables';
+
+footer {
+  margin-top: 10rem;
+
+  svg {
+    filter: brightness(10);
+  }
+}
+
+.footer {
+  background-color: $clr-gray900;
+  padding-top: $space-8;
+  padding-bottom: $space-16;
+  border-top: 1px solid $clr-gray200;
+
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 3rem;
+
+    .digg__ {
+      svg {
+        max-width: 90vw;
+      }
+      span {
+        color: $clr-gray900;
+
+        &:first-of-type {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: $space-6;
+
+  .footer__columns--column {
+    padding-right: 1rem;
+    word-break: break-word;
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  a,
+  p,
+  h2 {
+    color: $clr-white;
+  }
+
+  span,
+  a {
+    border-color: white;
+    font-size: 16px !important;
+    &:focus {
+      outline-color: $clr-white !important;
+    }
+    &::after {
+      background-color: $clr-white !important;
+    }
+
+    &:hover {
+      color: white;
+      span {
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $media-md) {
+    a {
+      font-size: 16px;
+      margin-right: $space-6;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    margin-bottom: $space-4;
+  }
+
+  li {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    word-break: initial;
+    word-break: break-word;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    span {
+      width: max-content;
+      word-break: break-word;
+      border-color: white;
+
+      svg {
+        width: 1rem;
+      }
+    }
+
+    .mail-icon {
+      display: none;
+    }
+
+    &[href^='mailto:'] {
+      .mail-icon {
+        display: block;
+      }
+    }
+
+    &:after {
+      // content: url(../../assets/external_link_icon_white.svg);
+      margin-left: 0.5rem;
+      margin-bottom: -5px;
+    }
+  }
+}
