@@ -115,12 +115,13 @@ function Devportalen({
   const cache = createCache({ key });
 
   useEffect(() => {
+    document.documentElement.classList.add('no-focus-outline');
     document.body.addEventListener('keyup', keyUp);
-    document.body.addEventListener('click', click);
+    document.body.addEventListener('mousedown', click); 
 
     return () => {
       document.body.removeEventListener('keyup', keyUp);
-      document.body.removeEventListener('click', click);
+      document.body.removeEventListener('mousedown', click);
     };
   }, []);
 
